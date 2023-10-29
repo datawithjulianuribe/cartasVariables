@@ -1,0 +1,129 @@
+body {
+  text-align: center;
+  font-family: 'Montserrat';
+  background-color: #011C5B;
+  color: #333333;
+}
+
+h1 {
+  color: #050505;
+  font-family: 'Montserrat';
+  text-align: center;
+}
+
+h2 {
+  color: #ffffff;
+  font-family: 'Montserrat';
+}
+
+section {
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+label, input {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+input[type="number"] {
+  font-size: 15px;
+  font-family: 'Montserrat';
+  padding: 10px 24px;
+  border: 1px solid #cccccc;
+  width: 160px;
+}
+
+button {
+  font-size: 15px;
+  font-family: 'Montserrat';
+  margin: 10px auto;
+  display: block;
+  padding: 10px 24px;
+  border: 0;
+  border-radius: 12px;
+  background-color: #2ba8fb;
+  color: #ffffff;
+  font-weight: Bold;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+button:hover {
+  background-color: #6fc5ff;
+  box-shadow: 0 0 20px #6fc5ff50;
+  transform: scale(1.1);
+}
+
+button:active {
+  background-color: #3d94cf;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+  box-shadow: none;
+  transform: scale(0.98);
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+footer {
+  font-family: 'Montserrat';
+  background-color: #C8C9C7;
+  color: #000000;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  bottom: 0;
+}
+
+.container {
+  width: 48%; /* Reducir ligeramente el ancho para evitar desbordamiento */
+  float: left;
+  margin: 10px; /* Agregar margen para separar los contenedores */
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+}
+
+.table-container {
+  width: 100%; /* Hacer que la tabla-container ocupe todo el ancho disponible */
+  /*height: 300px; /* Fijar una altura para evitar desbordamiento */
+  overflow: auto; /* Agregar barra de desplazamiento en caso de contenido largo */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.input-dinamico {
+  width: 25px; /* Cambia el tamaño según tus necesidades */
+  height: 20px; /* Cambia el tamaño según tus necesidades */
+  /* Agrega otros estilos según sea necesario */
+}
+
+.chart-container {
+  width: 100%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#chart-container_X, #chart-container_R, #chart-container_S, #chart-container_XS {
+  width: 400px; /* Ancho deseado */
+  height: 300px; /* Altura deseada */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#chart-container_X, #chart-container_R, #chart-container_S, #chart-container_XS {
+  font-size: 16px; /* Tamaño de fuente deseado */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+

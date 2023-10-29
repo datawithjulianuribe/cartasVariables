@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css" href='https://fonts.googleapis.com/css?family=Montserrat'>
+    <title>Control Estadistico-CEP</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+
+<body>
+    <section>
+        <img src="LOGO ITM 2020-04.png" alt="Imagen" width="100" height="100">
+        <h1>Cartas de control estadístico de procesos 🤓</h1>
+    </section>
+
+    <header>
+        <h2>Registro de Muestras</h2>
+    </header>
+
+    <section>
+        <p>Por favor, ingresa el número de muestras tomadas (M) y el número datos tomados (N).</p>
+        <label for="m">Cantidad de muestras (m): </label>
+        <input type="number" id="m"><br><br>
+        <label for="n">Número de datos (n): </label>
+        <input type="number" id="n"><br><br>
+        <button onclick="crearTabla()">Crear tabla de datos</button>
+        <div id="tabla-container" class="table-container"></div>
+        <button onclick="guardarDatos()">Guardar datos y Calcular resultados</button>
+        <div id="resultado"></div>
+        <div id="resultadoCartas"></div>
+    </section>
+
+    <header>
+        <h2>Gráficas de control de procesos</h2>
+    </header>
+
+    <section>
+        <button onclick="graficarCartas()">Graficar Cartas</button>
+        <p>Carta X barra</p>
+        <div id="chart-container_X" class="chart-container"></div>
+        <p>Carta R</p>
+        <div id="chart-container_R" class="chart-container"></div>
+        <p>Carta S de desviaciones</p>
+        <div id="chart-container_S" class="chart-container"></div>
+        <p>Carta X-S</p>
+        <div id="chart-container_XS" class="chart-container"></div>
+    </section>
+
+    <header>
+        <h2>Contacto</h2>
+    </header>
+
+    <footer>
+        <p>Si tienes dudas, inquietudes o sugerencias para mejorar el desempeño de esta herramienta, estaré dispuesto a conocerlas.</p>
+          <p>Email: julian.uribego@gmail.com</p>
+          <a class="whatsapp-button" href="https://wa.me/3013354163">Contactar por WhatsApp</a>
+        <p>Derechos de autor &copy; 2023 Julián Alberto Uribe Gómez 👨🏻‍💻</p>
+    </footer>
+
+    <script src="estadisticos.js"></script>
+
+    <script src="graficos.js"></script>
+
+</body>
+
+</html>
+
