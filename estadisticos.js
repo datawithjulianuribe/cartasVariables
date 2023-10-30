@@ -152,11 +152,19 @@ function mostrarResultados() {
 }
 
 function Capacidad() {
+    const LSE = parseFloat(document.getElementById('LSE').value);
+    const LIE = parseFloat(document.getElementById('LIE').value);
+
+    if (isNaN(LSE) || isNaN(LIE)) {
+        alert('Por favor, ingresa números válidos para los límites de la especificación.');
+        return;
+    }
+    
     // Cálculo capacidad de X
-    Cp_x = ((LSE+0,2) - (LSE-0,2) / (6*(resultado_X_VAR))).toFixed(3);
+    Cp_x = ((LSE - LSE) / (6*(resultado_X_VAR))).toFixed(3);
     // falta si es confiable o no y cuanto
-    Cpk_x = ((promedioPromedios) - (LIE-0,2) / (3*(resultado_X_VAR))).toFixed(3);
-    Cpk_x_su = ((LSE+0,2) - (promedioPromedios) / (3*(resultado_X_VAR))).toFixed(3);
+    Cpk_x = ((promedioPromedios - LIE) / (3*(resultado_X_VAR))).toFixed(3);
+    Cpk_x_su = ((LSE - promedioPromedios) / (3*(resultado_X_VAR))).toFixed(3);
     // falta si es confiable o no y cuanto
     const  result_cap= document.getElementById('resultadoCapacidad');
     result_cap.innerHTML = "Resultado Cp : " + Cp_x + "<br>Resultado Cpk : " + Cpk_x +" , "+ Cpk_x_su;
