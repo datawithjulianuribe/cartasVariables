@@ -7,6 +7,7 @@ let nfilas = [];
 let promedioPromedios, promedioRangos, promedioDesviaciones;
 let resultado_X_LSC, resultado_X_LIC, resultado_X_VAR, resultado_R_LSC, resultado_R_LIC, resultado_R_VAR;
 let resultado_S_LSC, resultado_S_LIC, resultado_S_VAR, resultado_XS_LSC, resultado_XS_LIC, resultado_XS_VAR;
+let LSE, LIE;
 
 const valores = [
     [0, 0, 1.880, 1.023, 0.729, 0.577, 0.483, 0.419, 0.373, 0.337, 0.308, 0.285, 0.266, 0.249, 0.235, 0.223, 0.212, 0.203, 0.194, 0.187, 0.180, 0.173, 0.167, 0.162, 0.157, 0.153],
@@ -148,4 +149,15 @@ function mostrarResultados() {
     resultadoCartas.innerHTML += "<br> R : " + promedioRangos + "<br> R LSC: " + resultado_R_LSC + "<br> R LIC: " + resultado_R_LIC + "<br> R VAR: " + resultado_R_VAR + "<br> ";
     resultadoCartas.innerHTML += "<br> S : " + promedioDesviaciones + "<br> S LSC: " + resultado_S_LSC + "<br> S LIC: " + resultado_S_LIC + "<br> S VAR: " + resultado_S_VAR + "<br> ";
     resultadoCartas.innerHTML += "<br> X : " + promedioPromedios + "<br> X-S LSC: " + resultado_XS_LSC + "<br> X-S LIC: " + resultado_XS_LIC + "<br> X-S VAR: " + resultado_XS_VAR;
+}
+
+function Capacidad() {
+    // Cálculo capacidad de X
+    Cp_x = ((LSE+0,2) - (LSE-0,2) / (6*(resultado_X_VAR))).toFixed(3);
+    // falta si es confiable o no y cuanto
+    Cpk_x = ((promedioPromedios) - (LIE-0,2) / (3*(resultado_X_VAR))).toFixed(3);
+    Cpk_x_su = ((LSE+0,2) - (promedioPromedios) / (3*(resultado_X_VAR))).toFixed(3);
+    // falta si es confiable o no y cuanto
+    const  result_cap= document.getElementById('resultadoCapacidad');
+    result_cap.innerHTML = "Resultado Cp : " + Cp_x + "<br>Resultado Cpk : " + Cpk_x +" , "+ Cpk_x_su;
 }
